@@ -3,11 +3,11 @@ def dfs_recursive(graph, node, visited):
     visited.append(node)
 
     # 인접 노드 방문
-    # for adj in graph[node]:
-    #     if adj not in visited:
-    #         dfs_recursive(graph, adj, visited)
-    #
-    # return visited
+    for adj in graph[node]:
+        if adj not in visited:
+            dfs_recursive(graph, adj, visited)
+
+    return visited
 
 #         1
 #      /  |  \
